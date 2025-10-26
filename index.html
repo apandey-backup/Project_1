@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header>
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="logo">
+        <i class="fas fa-code"></i>
+        <span>Project.org</span>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="nav-btns">
+        <a href="https://frontend-mini-projects-lac.vercel.app/" class="nav-links">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="https://github.com/apandey9046" class="nav-links">
+          <i class="fa-brands fa-github"></i>
+          <span>Github</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Calculator Area -->
+  <main class="main-content">
+    <div class="calculator-app">
+      <div class="calculator landscape">
+        <div class="display-container">
+          <div class="display">
+            <div class="previous-operand" id="previousOperand"></div>
+            <div class="current-operand" id="currentOperand">0</div>
+          </div>
+        </div>
+
+        <div class="keypad">
+          <!-- Scientific Functions -->
+          <div class="scientific-section">
+            <div class="scientific-row">
+              <button class="btn btn-scientific" data-scientific="sin">sin</button>
+              <button class="btn btn-scientific" data-scientific="cos">cos</button>
+              <button class="btn btn-scientific" data-scientific="tan">tan</button>
+              <button class="btn btn-scientific" data-scientific="log">log</button>
+              <button class="btn btn-scientific" data-scientific="ln">ln</button>
+            </div>
+            <div class="scientific-row">
+              <button class="btn btn-scientific" data-scientific="sinh">sinh</button>
+              <button class="btn btn-scientific" data-scientific="cosh">cosh</button>
+              <button class="btn btn-scientific" data-scientific="tanh">tanh</button>
+              <button class="btn btn-scientific" data-scientific="exp">exp</button>
+              <button class="btn btn-scientific" data-scientific="√">√</button>
+            </div>
+            <div class="scientific-row">
+              <button class="btn btn-scientific" data-scientific="(">(</button>
+              <button class="btn btn-scientific" data-scientific=")">)</button>
+              <button class="btn btn-scientific" data-scientific="π">π</button>
+              <button class="btn btn-scientific" data-scientific="e">e</button>
+              <button class="btn btn-scientific" data-scientific="x²">x²</button>
+            </div>
+            <div class="scientific-row">
+              <button class="btn btn-scientific" data-scientific="x^y">x^y</button>
+              <button class="btn btn-scientific" data-scientific="10^x">10^x</button>
+              <button class="btn btn-scientific" data-scientific="1/x">1/x</button>
+              <button class="btn btn-scientific" data-scientific="|x|">|x|</button>
+              <button class="btn btn-scientific" data-scientific="!">x!</button>
+            </div>
+          </div>
+
+          <!-- Main Keypad -->
+          <div class="main-section">
+            <div class="function-buttons">
+              <button class="btn btn-function" data-action="clear">AC</button>
+              <button class="btn btn-function" data-action="backspace">⌫</button>
+              <button class="btn btn-function" data-action="percentage">%</button>
+              <button class="btn btn-operator" data-operator="÷">÷</button>
+            </div>
+
+            <div class="number-buttons">
+              <button class="btn btn-number" data-number="7">7</button>
+              <button class="btn btn-number" data-number="8">8</button>
+              <button class="btn btn-number" data-number="9">9</button>
+              <button class="btn btn-operator" data-operator="×">×</button>
+
+              <button class="btn btn-number" data-number="4">4</button>
+              <button class="btn btn-number" data-number="5">5</button>
+              <button class="btn btn-number" data-number="6">6</button>
+              <button class="btn btn-operator" data-operator="-">-</button>
+
+              <button class="btn btn-number" data-number="1">1</button>
+              <button class="btn btn-number" data-number="2">2</button>
+              <button class="btn btn-number" data-number="3">3</button>
+              <button class="btn btn-operator" data-operator="+">+</button>
+
+              <button class="btn btn-number wide" data-number="0">0</button>
+              <button class="btn btn-number" data-number=".">.</button>
+              <button class="btn btn-equals" data-action="calculate">=</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="keyboard-note">
+        <i class="fas fa-keyboard"></i>
+        <span>Use keyboard for faster calculations!</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Audio elements for button sounds -->
+  <audio id="clickSound"
+    src="data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA=="></audio>
+
+  <!-- Footer -->
+  <footer class="calc-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <i class="fas fa-calculator"></i>
+        <span>Scientific Calculator</span>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-link" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" class="social-link" title="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-link" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" class="social-link" title="Code">
+          <i class="fas fa-code"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
